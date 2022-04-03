@@ -7,7 +7,7 @@ import CardTable from "components/Cards/CardTable";
 export default function AllTasks({ tableDataAllTasks }) {
     return (
         <>
-            <CardTable tableData={tableDataAllTasks} color={'light'} tablePlatform={'All'} />
+            <CardTable tableData={tableDataAllTasks} color={'light'} tablePlatform={'All'} allowAssign />
         </>
     );
 }

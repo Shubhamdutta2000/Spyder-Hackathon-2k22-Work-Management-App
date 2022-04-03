@@ -1,8 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { getColorByStatus } from "../../utils/colorStatus";
+import UserDropdown from "components/Dropdowns/UserDropdown";
+import NotificationDropdown from "components/Dropdowns/TableDropdown";
 
-export default function CardTable({ color, tableData, tablePlatform }) {
+export default function CardTable({ color, tableData, tablePlatform, allowAssign = false }) {
   console.log("inside cardTable", tableData);
 
   return (
@@ -116,7 +118,18 @@ export default function CardTable({ color, tableData, tablePlatform }) {
                     >
                       Priority
                     </th>
+                    {allowAssign && <th
+                      className={
+                        "px-6 align-middle text-center border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left " +
+                        (color === "light"
+                          ? "bg-blueGray-50 text-blueGray-500 border-blueGray-100"
+                          : "bg-blueGray-600 text-blueGray-200 border-blueGray-500")
+                      }
+                    >
+                      Assign Task
+                    </th>}
                   </tr>
+
                 </thead>
                 <tbody>
                   {tableData.map((data) => {
@@ -160,6 +173,9 @@ export default function CardTable({ color, tableData, tablePlatform }) {
                         <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
                           {data.priority}
                         </td>
+                        {allowAssign && <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-center">
+                          <NotificationDropdown />
+                        </td>}
                       </tr>
                     );
                   })}
