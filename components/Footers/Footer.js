@@ -67,31 +67,27 @@ export default function Footer() {
                     <li>
                       <a
                         className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                        href="https://discord.com/api/oauth2/authorize?client_id=921836573463560202&permissions=8&scope=applications.commands%20bot"
                       >
-                        Discord invite link
+                        Contact Us
                       </a>
                     </li>
                     <li>
                       <a
                         className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                        href="https://slack.com/oauth/v2/authorize?client_id=2883656288675.2885959981908&scope=app_mentions:read,channels:history,chat:write,commands,im:history,im:read,im:write,channels:read,mpim:history,mpim:read,files:write,users:read,users:write,users:read.email&user_scope="
                       >
-                        Slack invite link
+                        About Us
                       </a>
                     </li>
                     <li>
                       <a
                         className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                        href="https://chatterpay-discord-bot.vercel.app/"
-                      >
+                        href='/admin/dashboard' >
                         Dashboard
                       </a>
                     </li>
                     <li>
                       <a
                         className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                        href="https://chatterpay-discord-bot.vercel.app/"
                       >
                         Developer Hub
                       </a>
