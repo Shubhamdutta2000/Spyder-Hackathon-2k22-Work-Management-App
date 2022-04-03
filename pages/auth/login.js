@@ -20,16 +20,17 @@ export default function Login({ providers }) {
                 </div>
                 <div className="btn-wrapper text-center">
                   <div key='Google'>
-                    <button
+                    <Link
                       className="bg-white active:bg-blueGray-50 text-blueGray-700 font-normal px-4 py-2 rounded outline-none focus:outline-none mr-2 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xs ease-linear transition-all duration-150"
-                    >
-                      <img
-                        alt="..."
-                        className="w-5 mr-1"
-                        src={`/img/google.svg`}
-                      />
-                      Sign in with Google
-                    </button>
+                      href='/admin/dashboard'
+                    ><div className="inline-flex items-center cursor-pointer">
+                        <img
+                          alt="..."
+                          className="w-5 mr-1"
+                          src={`/img/google.svg`}
+                        />
+                        Sign in with Google</div>
+                    </Link>
                   </div>
                 </div>
                 <hr className="mt-6 border-b-1 border-blueGray-300" />
@@ -88,7 +89,7 @@ export default function Login({ providers }) {
                         className="bg-purple-500 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
                         type="button"
                       >
-                        Login In
+                        Log In
                       </button>
                     </div>
                   </Link>
